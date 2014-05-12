@@ -24,5 +24,20 @@ namespace Salesforce.Force.FunctionalTests
 
             Assert.IsNotNull(auth.AccessToken);
         }
+
+        [Test]
+        public async Task Query_Accounts_IsNotNull()
+        {
+            var auth = new AuthenticationClient();
+            await auth.UsernamePasswordAsync(_clientId, _clientSecret, _username, _password);
+
+            var client = new ForceClient(auth.InstanceUrl, auth.AccessToken, auth.ApiVersion);
+
+            var results = await client.QueryAsync<dynamic>("SELECT Id, Name, Description FROM Account");
+
+            var accounts = results.records;
+
+            Assert.IsNotNull(accounts);
+        }
     }
 }
