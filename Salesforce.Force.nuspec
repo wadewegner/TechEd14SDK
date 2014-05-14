@@ -1,0 +1,27 @@
+<?vxml version="1.0"?>
+<package >
+  <metadata>
+    <id>WadeWegner.Salesforce.Force</id>
+    <version>0.0.1</version>
+    <authors>wadewegner</authors>
+    <owners>wadewegner</owners>
+    <licenseUrl>https://github.com/wadewegner/TechEd14SDK/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/wadewegner/TechEd14SDK</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>My demonstration of how to create a NuGet.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>salesforce api login query</tags>
+    <dependencies>
+        <dependency id="Microsoft.Bcl" version="1.1.9" />
+        <dependency id="Microsoft.Bcl.Build" version="1.0.14" />
+        <dependency id="Microsoft.Net.Http" version="2.2.22" />
+        <dependency id="Newtonsoft.Json" version="6.0.3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="src\Salesforce.Force\bin\Debug\Salesforce.Force.dll" target="lib" />
+    <file src="src\Salesforce.Force\bin\Debug\Salesforce.Force.pdb" target="lib" />
+    <file src="src\Salesforce.Force\*.cs" target="src" />
+  </files>
+</package>
